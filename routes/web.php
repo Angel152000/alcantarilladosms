@@ -15,8 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('inicio');
+
+//Ruta para pedidos
+Route::post('/crear/pedido', [App\Http\Controllers\PedidosController::class, 'create'])->name('pedidos');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

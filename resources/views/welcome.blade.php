@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
-  <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  <link href="{{ asset('assets/img/favicon.ico') }}" rel="icon">
+  <link href="{{ asset('assets/img/favicon.ico') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -23,6 +23,7 @@
   <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
@@ -35,14 +36,12 @@
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contacto@alacantarilladosms.cl</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+56 9 9503 5355</span></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>9 9503 5355</span></i>
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
         <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> -->
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://api.whatsapp.com/send?phone=936833597" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
-        <!-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a> -->
       </div>
     </div>
   </section>
@@ -53,7 +52,7 @@
 
       <!-- <h1 class="logo"><a href="index.html">BizLand<span>.</span></a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="#" class="logo"><img src="{{ asset('assets/img/logo.png') }}" alt="" style="max-height: 250px !important;"></a>
+      <a href="{{URL::route('inicio')}}" class="logo"><img src="{{ asset('assets/img/logo.png') }}" alt="" style="max-height: 250px !important;"></a>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -94,6 +93,8 @@
       <h2>Especializados con mas de 30 años de experiencia en Gasfitería y Destapes.</h2>
       <div class="d-flex">
         <a href="#about" class="btn-get-started scrollto">Sobre Nosotros</a>
+        <div style="margin-right:1rem;"></div>
+        <a href="https://api.whatsapp.com/send?phone=56954795286" class="btn-get-started scrollto" target="_blank" style="background-color:#3bc600 !important;"><i class="bi bi-whatsapp"></i> WhatsApp</a>
         <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
       </div>
     </div>
@@ -311,7 +312,7 @@
                         <i class="bx bx-check"></i> Reparación e instalación de calefont convensionales e ionizados. <br>
                         <i class="bx bx-check"></i>Instalación y reparación de sanitarios. <br>
                         <i class="bx bx-check"></i>Filtraciones. <br>
-                        <i class="bx bx-check"></i>Detección de fugas de gua y gas. <br>
+                        <i class="bx bx-check"></i>Detección de fugas de agua y gas. <br>
                         <i class="bx bx-check"></i>Reparación e instalación de cocinas y estufas. <br>
                         <i class="bx bx-check"></i>Conversiónes en artefactos de gas. <br>
                     </p>
@@ -492,62 +493,50 @@
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+            <img src="{{ asset('assets/img/gasfiteria1.jpg') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>Gasfitería</h4>
+              <p>Reparación e instalación de calefont convensionales e ionizados</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+            <img src="{{ asset('assets/img/gasfiteria2.jpg') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>Gasfitería</h4>
+              <p>Instalación y reparación de sanitarios</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+            <img src="{{ asset('assets/img/alcantarillados1.jpg') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>Alcantarillados</h4>
+              <p>Destape de piletas</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+            <img src="{{ asset('assets/img/gasfiteria3.jpg') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>Gasfitería</h4>
+              <p>Detección de fugas de agua y gas</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+            <img src="{{ asset('assets/img/alcantarillados2.jpg') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>Alcantarillados</h4>
+              <p>Destape de ductos en el hogar</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+            <img src="{{ asset('assets/img/alcantarillados3.jpg') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>Alcantarillados</h4>
+              <p>Destape de lavaplatos o lavamanos</p>
             </div>
           </div>
 
@@ -854,27 +843,23 @@
             </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form method="POST" id="form"  action="{{URL::route('pedidos')}}" accept-charset="UTF-8" enctype="multipart/form-data" class="php-email-form">
+              {{csrf_field()}}
               <div class="row">
                 <div class="col form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <input type="text" name="nombre" class="form-control" id="name" placeholder="Nombre">
                 </div>
                 <div class="col form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email">
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" name="asunto" id="subject" placeholder="Asunto">
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Mensaje"></textarea>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
             </form>
           </div>
 
@@ -911,7 +896,7 @@
             <h3 style="color:#106eea;">ALCANTARILLADOS <span style="color:#3bc600;" >M</span><span>S</span></h3>
             <p>
               <strong>Email:</strong> contacto@alacantarilladosms.cl<br>
-              <strong>Teléfono:</strong> +56 9 9503 5355<br>
+              <strong>Teléfono:</strong> 9 9503 5355<br>
             </p>
           </div>
 
@@ -942,7 +927,7 @@
               <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-instagram"></i></a>
-              <a href="https://api.whatsapp.com/send?phone=936833597" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+              <a href="https://api.whatsapp.com/send?phone=56954795286" class="whatsapp" target="_blank"><i class="bx bxl-whatsapp"></i></a>
               <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
               <!-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
             </div>
@@ -963,6 +948,8 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script src="{{ asset('assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
   <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
   <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
@@ -971,6 +958,51 @@
   <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
   <script src="{{ asset('assets/vendor/waypoints/noframework.waypoints.js') }}"></script>
   <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
+  <script>
+    $("#form").submit(function(e)
+    {
+      e.preventDefault();
+      var url = $(this).attr('action');
+
+      $.ajax({
+        url: url,
+        type: 'post',
+        dataType : 'json',
+        data: new FormData(this),
+        contentType: false,
+        processData: false,
+        success: function (res) 
+        {
+          if (res.status === 'success') 
+          {
+            Swal.fire({
+              title: 'Mensaje Enviado',
+              text: res.msg,
+              icon: 'success',
+              showCancelButton: false,
+              confirmButtonText: 'Aceptar',
+              confirmButtonColor: '#019df4'
+            });
+            $('#name').val('');
+            $('#email').val('');
+            $('#subject').val('');
+            $('#mensaje').val('');
+          }
+          else
+          {
+            Swal.fire({
+              title: 'Error!',
+              text: res.msg,
+              icon: 'error',
+              showCancelButton: false,
+              confirmButtonText: 'Aceptar',
+              confirmButtonColor: '#019df4'
+            });
+          }
+        }
+      });
+    });
+  </script>
 
   <!-- Template Main JS File -->
   <script src="{{ asset('assets/js/main.js') }}"></script>

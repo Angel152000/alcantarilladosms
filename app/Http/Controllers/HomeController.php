@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pedidos;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $objPedidos = new Pedidos();
+        $this->data['pedidos'] = $objPedidos->getPedidosAll();
+        return view('home',$this->data);
     }
 }
